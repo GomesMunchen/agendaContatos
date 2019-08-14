@@ -28,4 +28,8 @@ class Contatos extends Model
         }
         $this->attributes['avatar'] = str_replace('public', 'storage', $filepath) . $filename;
     }
+    //find pessoas por letra inicial
+//    public static function indexLetra($letra) {
+  //    return static::where('nome', 'LIKE', $letra . '%')->get();
+    //}
 }

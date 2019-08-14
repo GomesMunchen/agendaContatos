@@ -12,21 +12,27 @@
         line-height: 30px;
     }
 </style>
-
 @endsection
-
 @section('content')
-
 <div class="container">
     <div class="card">
         <div class="card-header">
           <div class="input-group mb-3">
             <input type="text" class="form-control" placeholder="Pesquisar Contato" ></input>
             <div class="input-group-append">
-              <button class="btn btn-outline-secondary" type="button">Buscar</button>
+              <button class="btn btn-outline-secondary " type="button">Buscar</button>
             </div>
+            <a href="{{ url('contato/add') }}" class="btn btn-outline-secondary float-right">Novo Contato</a>
           </div>
-            <a href="{{ url('contato/add') }}" class="btn btn-primary btn-sm float-right">Novo Contato</a>
+          <div class="col-sm-12" style="padding-bottom: 10px">
+            @foreach(range('A','Z') as $letra)
+            <div class="btn-group">
+              <a href="{{ url('contato/' .$letra) }}" class="btn btn-outline-secondary">
+                {{ $letra }}
+              </a>
+            </div>
+            @endforeach
+          </div>
         </div>
         <div class="card-body p-0">
             <div class="table-responsive border-0">

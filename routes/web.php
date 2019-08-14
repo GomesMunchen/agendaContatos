@@ -24,4 +24,5 @@ Route::group(['middleware'=>'auth', 'prefix'=>'contato'], function() {
           Route::get('/edit/{id}', 'ContatoController@edit');
           Route::put('{id}','ContatoController@update');
           Route::delete('{id}', 'ContatoController@destroy');
+          
 });

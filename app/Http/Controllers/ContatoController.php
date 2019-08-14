@@ -28,7 +28,7 @@ class ContatoController extends Controller
     {
         return view('contato.create');
     }
-  
+
     /**
      * Store a newly created resource in storage.
      *
